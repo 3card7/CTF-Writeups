@@ -3,7 +3,7 @@ Starting off with this box we are provided a set of credentials.
 tyler:LhKL1o9Nm3X2
 
 Like all machines, I like to start off with a quick nmap -sV scan which returns that we have SSH and HTTP running on ports 22 and 80.
-![nmap scan results](../../../assets/Outbound-HTB/01-nmapscan.png "Nmap scan results")
+![nmap scan results](../../assets/Outbound-HTB/01-nmapscan.png "Nmap scan results")
 
 
 I tried connecting to the SSH service with Tylers credentials, but no dice. A quick searchsploit for the http and ssh services confirmed 
