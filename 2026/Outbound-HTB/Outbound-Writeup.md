@@ -1,4 +1,4 @@
-#### Enumeration
+## Enumeration
 Starting off with this box we are provided a set of credentials.
 tyler:LhKL1o9Nm3X2
 
@@ -20,7 +20,7 @@ I did some research to where the exploitdb exploits are stored in Kali and disco
 
 ![Exploit investigation](../../assets/Outbound-HTB/03-exploitinvestigation.png "Exploit investigation")
 
-#### Exploitation
+## Exploitation
 I renamed the exploit to roundcubeexploit.rb and then moved it to /usr/share/metasploit-framework/modules/exploits/multi/ so the exploit is usable in Metasploit. 
 
 ![Exploit moved to metasploit](../../assets/Outbound-HTB/04-exploitmovedtometa.png "Exploit moved to metasploit")
@@ -34,7 +34,7 @@ set password LhKL1o9Nm3X2 - Same as above
 
 ![Metasploit options set](../../assets/Outbound-HTB/05-metasploitoptionsset.png "Metasploit options set")
 
-#### Foothold
+## Foothold
 With all the options set we are ready to run the exploit and see what we get. 
 
 ![Meterpreter shell](../../assets/Outbound-HTB/06-meterpretershell.png "Meterpreter shell")
@@ -87,7 +87,7 @@ We know this isn't Jacob's email password so I decided to try it out on the SSH 
 
 ![User flag](../../assets/Outbound-HTB/13-userflag.png "User flag")
 
-#### Privelege Escalation
+## Privelege Escalation
 To begin the privelege escalation I always start with sudo -l. Immediately we notice that Jacob can run below as sudo, I knew this had to be something of interest but I got stuck here for a while and decided to consult ippsecs video on how to exploit this. I got so caught up in trying to find a specific version to search for exploits that I completely overlooked just googling "linux below exploit" which returned results indicating that there might be a local privelege escalation exploit.. 
 
 ![Sudo -l results](../../assets/Outbound-HTB/14-sudol.png "Sudo -l results")
@@ -96,10 +96,10 @@ Having read and watched how the attack works we are ready to try it on our box. 
 
 ![Root flag](../../assets/Outbound-HTB/15-rootflag.png "Root flag")
 
-#### Resources used
+## Resources used
 Exploit for below - https://github.com/rvizx/CVE-2025-27591
 Explanation of below vulnerability - https://security.opensuse.org/2025/03/12/below-world-writable-log-dir.html
 ippsec CTF walkthrough - https://www.youtube.com/watch?v=bDql3eTHgZ8&t=1253s
 
-#### Things I learned / Explanations
+## Things I learned / Explanations
 More coming.
